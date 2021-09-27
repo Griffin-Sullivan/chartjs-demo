@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Doughnut } from 'react-chartjs-2';
 import React, { useState, useRef } from 'react';
@@ -9,15 +8,17 @@ function App() {
 
   const updateChart = async e => {
     e.preventDefault();
-    doughnut.current.data.datasets[0].data = [food, 1450, 45, 120, 600, 115]
-    doughnut.current.update()
+    doughnut.current.data.datasets[0].data = [food, 1450, 45, 120, 600, 115];
+    doughnut.current.update();
+    var data = {};
+    data.food = food;
     
-    const response = await fetch('/', {
+    const response = await fetch('/budget', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ food: food }),
+      body: JSON.stringify(data),
     });
     const body = await response.text();
   }
