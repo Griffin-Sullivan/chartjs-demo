@@ -10,13 +10,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res = fetch('http://localhost:3001/budget', {
+    res = fetch('https://chartjs-demo-test.herokuapp.com:3001/budget', {
         method: 'GET'
     });
 });
 
 app.post("/", (req, res) => {
-    res = fetch('http://localhost:3001/budget', {
+    res = fetch('https://chartjs-demo-test.herokuapp.com:3001/budget', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
