@@ -20,6 +20,6 @@
   "homepage": "https://github.com/Griffin-Sullivan/chartjs-demo#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.7"
+    "mongoose": "^6.0.8"
   }
 }
