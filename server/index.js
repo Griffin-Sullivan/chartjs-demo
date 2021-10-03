@@ -8,6 +8,8 @@ require('./routes/budget.routes.js')(app);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 
 // Database config
 
